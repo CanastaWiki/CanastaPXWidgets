@@ -1,0 +1,24 @@
+<noinclude>__NOTOC__
+This widget allows you to embed a '''[https://developers.facebook.com/docs/plugins/like-button Facebook Like Button]''' (iframe version) on your wiki page.
+
+Source: mediawikiwidgets.org
+
+==Using this widget==
+To insert this widget, use the following code:
+
+ <nowiki>{{#widget:</nowiki>Facebook Like Button<nowiki>|profile=https://www.facebook.com/CurseGamepedia}}</nowiki>
+
+===Parameters===
+All parameters are required. Each parameter is separated from the others by a pipe symbol '''"|"''' (don't use spaces in the code). '''If you want to use the default values, then the only required parameter is ''profile''.'''
+
+* '''profile''' - URL of page on Facebook (e.g. https://www.facebook.com/CurseGamepedia). This should match the URL shown when the person's profile is on-screen; no other code in the URL should be copied, i.e. "&sk=wall".
+* '''width''' - Width in pixels for the box; this should only be a number, no "px". Defaults to '''52'''. If '''standard''' is set to true, set '''width''' to at least '''225''' for accurate rendering. If '''button_count''' is set to true, set '''width''' to '''90''' for accurate rendering. Minimum is '''47'''.
+* '''height''' - Height in pixels for the box; this should only be a number, no "px". Defaults to '''20'''. If '''faces''' or '''standard''' is set to true, set '''height''' to '''80''' for accurate rendering. If '''box_count''' is set to true, set '''height''' to '''65''' for accurate rendering. Minimum is '''20'''.
+* '''layout''' - Selects one of the different layouts that are available for the plugin. Can be one of '''standard''', '''button_count''', '''button''' or '''box_count'''. Defaults to '''button'''.
+* '''action''' - The verb to display on the button. Can be either '''like''' or '''recommend'''. Defaults to '''like'''.
+* '''size''' - The button is offered in 2 sizes i.e. '''large''' and '''small'''. Defaults to '''small'''.
+* '''faces''' - Specifies whether to display profile photos below the button. '''true''' or '''false'''. Defaults to '''false'''.
+* '''share''' - Specifies whether to include a share button beside the Like button. '''true''' or '''false'''. Defaults to '''false'''.
+* '''theme''' - The color scheme used by the plugin for any text outside of the button itself. Can be '''light''' or '''dark'''. Defaults to '''light'''.
+
+</noinclude><includeonly><iframe src="https://www.facebook.com/plugins/like.php?href=<!--{$profile}-->&amp;width=<!--{$width|default:52|escape:'urlpathinfo'}-->&amp;layout=<!--{$layout|default:button|escape:'urlpathinfo'}-->&amp;action=<!--{$action|default:like|escape:'urlpathinfo'}-->&amp;size=<!--{$size|default:small|escape:'urlpathinfo'}-->&amp;show_faces=<!--{$faces|default:false|escape:'urlpathinfo'|validate:'boolean'}-->&amp;share=<!--{$share|default:false|escape:'urlpathinfo'|validate:'boolean'}-->&amp;height=<!--{$height|default:20|escape:'urlpathinfo'}-->&amp;colorscheme=<!--{$theme|default:light|escape:'urlpathinfo'}-->&amp;appId" width="<!--{$width|default:52|escape:'urlpathinfo'}-->" height="<!--{$height|default:20|escape:'urlpathinfo'}-->" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></includeonly>
