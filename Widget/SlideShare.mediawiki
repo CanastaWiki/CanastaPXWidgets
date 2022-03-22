@@ -1,0 +1,22 @@
+<noinclude>__NOTOC__
+This widget allows you to add [http://www.slideshare.net/ SlideShare] slideshows to your wiki page.
+
+Source: mediawikiwidgets.org
+
+== Using this widget ==
+To insert this widget, use the following code:
+
+ <nowiki>{{#widget:SlideShare
+|id=11965061
+|width=800
+|height=600
+}}</nowiki>
+
+== Parameters ==
+* '''id''' - is a parameter from embed code (click "embed -> customize" and copy "id" parameter from WordPress short code)
+* '''start''' - optional parameter to define start slide number
+* '''width''' & '''height''' - optional, 425x348 is a default
+* '''player''' - defaults to '2' and allows you to switch to other players
+* '''norelated''' - if set, widget will not display related content and sharing functionality at the end of the deck
+
+</noinclude><includeonly><iframe src="//www.slideshare.net/slideshow/embed_code/<!--{$id|escape:'urlpathinfo'}-->?<!--{if isset($norelated)}-->&rel=0<!--{/if}--><!--{if isset($start)}-->&startSlide=<!--{$start|escape:'urlpathinfo'|validate:int}--><!--{/if}-->" width="<!--{$width|default:425|escape:'html'}-->" height="<!--{$height|default:355|escape:'html'}-->" marginwidth="0" marginheight="0" scrolling="no" style="border: 1px solid #ccc; border-width: 1px 1px 0; margin-bottom: 5px; max-width: 100%;" allowfullscreen></iframe></includeonly>
