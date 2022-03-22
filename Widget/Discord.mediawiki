@@ -1,0 +1,20 @@
+<noinclude>__NOTOC__
+This widget allows you to embed a '''[https://blog.discordapp.com/add-the-discord-widget-to-your-site/ Discord widget]''' (HTML version) on your wiki page.
+
+Source: mediawikiwidgets.org
+
+== Using this widget ==
+This widget allows you to add [https://blog.discordapp.com/add-the-discord-widget-to-your-site/ Discord] to your wiki page.
+
+To insert this widget, use the following code:
+
+ <nowiki>{{#widget:Discord
+  | id =
+  | theme =
+}}</nowiki>
+
+== Parameters ==
+* '''id''' - Discord-ID 
+* '''theme''' - dark (default), light
+
+</noinclude><includeonly><iframe src="//discordapp.com/widget?id=<!--{$id|escape:'html'}-->&theme=<!--{$theme|default:"dark"}-->" width="<!--{$width|default:"350"}-->" height="<!--{$height|default:"500"}-->" allowtransparency="true" style="border: none"></iframe></includeonly>
