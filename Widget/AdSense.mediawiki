@@ -1,0 +1,89 @@
+<noinclude>__NOTOC__
+This widget allows you to embed '''[//www.google.com/adsense/ AdSense ads]''' on your wiki page.
+
+Source: mediawikiwidgets.org
+
+== Using this widget ==
+To insert this widget, use the following code:
+
+=== Code from Google ===
+In Google AdSense, click "Get code". Copy that code. It will look similar to this:
+
+<pre><script type="text/javascript"><!--
+google_ad_client = "ca-pub-4602712147397250";
+/* 160x600, created 1/1/10 */
+google_ad_slot = "6127367636";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></pre>
+
+=== Code in the wiki ===
+Take the values from above and place them in a widget call, as below.
+
+ <nowiki>{{#widget:</nowiki>{{PAGENAME}}<nowiki>
+|name=myadname
+|client=ca-pub-4602712147397250
+|slot=6127367636
+|width = 160
+|height = 600
+}}</nowiki>
+
+==== Parameters ====
+* '''name''' - The ad name in the AdSense system - this is only required for responsive ads
+* '''client''' - Your AdSense Publisher ID - '''NOTE: It is highly recommended that you hard-code the client ID onto the widget page (Widget:AdSense). Otherwise, users will be able to insert their own ID and make money off of your site.'''
+* '''slot''' - The AdSense Slot ID for this ad
+* '''width''' - The desired width for this ad
+* '''height''' - The desired height for this ad
+
+== Responsive example ==
+
+The Widget was designed to work with responsive ads as well. Usage is similar.
+
+=== Code from Google ===
+In Google AdSense, click "Get code". Copy that code. It will look similar to this:
+
+<pre><style>
+.responsive-1 { width: 320px; height: 50px; }
+@media(min-width: 500px) { .responsive-1 { width: 468px; height: 60px; } }
+@media(min-width: 800px) { .responsive-1 { width: 728px; height: 90px; } }
+</style>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive 1 -->
+<ins class="adsbygoogle responsive-1"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4602712147397250"
+     data-ad-slot="6127367636"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></pre>
+
+=== Code in the wiki ===
+
+==== CSS ====
+Take the values from the above <style> section and add the following CSS to your wiki, either by inserting it into your Mediawiki:Common.css, or by adding it to your skin. More info is available [https://www.mediawiki.org/wiki/CSS here].
+<pre>
+.responsive-1 { width: 320px; height: 50px; }
+@media(min-width: 500px) { .responsive-1 { width: 468px; height: 60px; } }
+@media(min-width: 768px) { .responsive-1 { width: 728px; height: 90px; } }
+</pre>
+==== Widget Call ====
+Take the values from the above <script> section and place them in a widget call, as below.
+
+ <nowiki>{{#widget:</nowiki>{{PAGENAME}}<nowiki>
+|name=responsive-1
+|client=ca-pub-4602712147397250
+|slot=6127367636
+}}</nowiki>
+
+</noinclude><includeonly><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle <!--{$name|escape:html}-->"
+     style="display:inline-block;width:<!--{$width|escape:'int'}-->;height:<!--{$height|escape:'int'}-->"
+     data-ad-client="<!--{$client|escape:html}-->"
+     data-ad-slot="<!--{$slot|escape:html}-->"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></includeonly>
