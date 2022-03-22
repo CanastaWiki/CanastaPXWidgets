@@ -1,0 +1,29 @@
+{
+	"publisher": "Canasta Project",
+	"author": "Various",
+	"language": "en",
+  "licenseName": "cc-by-sa 3.0",
+	"url": "https:\/\/github.com\/CanastaWiki\/CanastaPXWidgets",
+	"packages": {
+		"Canasta Widgets": {
+			"globalID": "wiki.canasta.widgets",
+			"description": "Some popular widgets, for use with the Widgets extension",
+			"version": "0.1",
+			"directoryStructure": {
+				"service": "GitHub",
+				"accountName": "CanastaWiki",
+				"repositoryName": "CanastaPXWidgets",
+				"namespaceSettings": [
+					{
+						"namespace": "NS_WIDGET",
+						"fileNamePrefix": "Widget/",
+						"fileNameSuffix": ".mediawiki"
+					}
+				]
+			},
+			"requiredExtensions": [
+				"Widgets"
+			]
+		}
+	}
+}
