@@ -1,0 +1,17 @@
+<noinclude>
+This widget allows you to add a [https://developers.google.com/youtube/player_parameters YouTube video player] to your wiki page.
+
+Source: mediawikiwidgets.org
+
+== Using this widget ==
+To insert this widget, use the following code:
+
+  <nowiki>{{#widget:YouTube|id=DWef69ItVrU}}</nowiki>
+
+== Parameters ==
+* '''id''' - video ID (from the URL)
+* '''start''' - timestamp of starting point within the video in seconds 
+* '''playlist''' - playlist name (starts with PL) - first clip is played ('''id''' and '''start''' are ignored)
+* '''height''' and '''width''' define view dimensions, 420x350 is default
+
+</noinclude><includeonly><iframe width="<!--{$width|escape:'html'|default:'425'}-->" height="<!--{$height|escape:'html'|default:355}-->" src="https://www.youtube.com/embed/<!--{if isset($playlist)}-->?listType=playlist&list=<!--{$playlist|escape:'urlpathinfo'}--><!--{else}--><!--{$id|escape:'urlpathinfo'}--><!--{if isset($start)}-->?start=<!--{$start|escape:'urlpathinfo'}--><!--{/if}--><!--{/if}-->" style="border: none" allowfullscreen></iframe></includeonly>
