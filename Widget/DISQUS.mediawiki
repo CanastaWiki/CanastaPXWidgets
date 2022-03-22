@@ -1,0 +1,39 @@
+<noinclude>__NOTOC__
+This widget allows you to embed '''[https://www.disqus.com/ DISQUS Comments]''' on your wiki page.
+
+Source: mediawikiwidgets.org
+
+== Using this widget ==
+To insert this widget, use the following code:
+
+ <nowiki>{{#widget:</nowiki>{{PAGENAME}}<nowiki>
+|id=</nowiki>[http://disqus.com/admin/register/ yourid]<nowiki>
+|uniqid={{PAGENAME}}
+|url={{fullurl:{{PAGENAME}}}}
+}}</nowiki>
+
+You might want to create a template with this code called DISQUS and let people just use it like <code><nowiki>{{DISQUS}}</nowiki></code>.
+
+== Parameters ==
+* '''id''' - short site id you used when [http://disqus.com/admin/register/ registered a site in DISQUS]
+* '''uniqid''' - optional unique ID for the page - you can set it to <code><nowiki>{{PAGENAME}}</nowiki></code> for wikis (to make it work on edit pages, and other URLs for the same page.
+* '''url''' - optional URL for permalinking
+
+'''Note:''' Currently DISQUS has issues with styles where MW CSS overrides theirs and bullets show up all over the place, the only solution at the moment is to [http://docs.disqus.com/help/44/ switch to use their Narcissus theme].
+
+</noinclude><includeonly><div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '<!--{$id|escape:'urlpathinfo'}-->'; // required: replace example with your forum shortname
+    <!--{if (isset($uniqid))}-->var disqus_identifier = '<!--{$uniqid|escape:'quotes'}-->';<!--{/if}-->
+    <!--{if (isset($url))}-->var disqus_url = '<!--{$url|escape:'quotes'}-->';<!--{/if}-->
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></includeonly>
